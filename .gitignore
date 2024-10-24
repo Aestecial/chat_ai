@@ -1,4 +1,6 @@
 /venv/
 /.idea/
 
+.gitignore
+
 .env
