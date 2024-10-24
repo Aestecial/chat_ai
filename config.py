@@ -8,3 +8,4 @@ load_dotenv()  # Load environment variables from .env
 @dataclass
 class Config:
     BOT_TOKEN: str = os.getenv("BOT_TOKEN")
+    AUTH_TOKEN: str = os.getenv("AUTH_TOKEN")
