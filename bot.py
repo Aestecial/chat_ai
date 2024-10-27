@@ -15,6 +15,10 @@ from handlers.chats import (
     chat, characters
 )
 
+from handlers.others import (
+    about
+)
+
 
 async def main():
     logging.basicConfig(
@@ -34,6 +38,7 @@ async def main():
     dp.include_router(start.router)
     dp.include_router(characters.router)
     dp.include_router(chat.router)
+    dp.include_router(about.router)
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)

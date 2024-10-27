@@ -25,7 +25,7 @@ async def message_handler(message: Message, state: FSMContext, bot: Bot):
 
     await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
     name, text = await send_message(data['chat_id'], message.text, data['char_id'])
-    body = f"{name}: {text}"
+    body = f"{text}"
 
     await message.answer(text=body)
 
