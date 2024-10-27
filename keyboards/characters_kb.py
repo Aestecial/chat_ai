@@ -7,6 +7,7 @@ from utils.api import get_char
 async def characters_kb(characters):
     builder = InlineKeyboardBuilder()
     for char in characters:
+        char = char['char_id']
         name = await get_char(char)
         builder.add(
             InlineKeyboardButton(text=f"{name}", callback_data=f"character_{char}")
